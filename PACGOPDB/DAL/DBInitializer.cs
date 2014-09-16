@@ -20,6 +20,9 @@ namespace PACGOPDB.DAL
                 new ClassDeck{SeasonID=0,Name="Sorcerer"},
                 new ClassDeck{SeasonID=0,Name="Wizard"}
             };
+            classDecks.ForEach(s => context.ClassDecks.Add(s));
+            context.SaveChanges();
+
             var seasons = new List<Season>{
                 new Season{ID=0,Name="Season of the Shackles"}
             };
